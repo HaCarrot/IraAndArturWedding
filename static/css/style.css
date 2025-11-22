@@ -2,7 +2,13 @@
 @viewport {
     width: device-width;
 }
+:root {
+  color-scheme: light only;
+}
 
+html {
+  color-scheme: light;
+}
 * {
     margin: 0;
     padding: 0;
