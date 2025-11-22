@@ -11,18 +11,18 @@
 @font-face {
     font-family: 'Comic Sans MS';
     src: local('Comic Sans MS'),
-         url('../fonts/COMIC.ttf') format('truetype');
+         url('static/fonts/COMIC.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Comic Sans';
     src: local('Comic Sans'),
-         url('../fonts/COMIC.ttf') format('truetype');
+         url('static/fonts/COMIC.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Segoe UI Emoji';
     src: local('Segoe UI Emoji'),
-         url('/static/fonts/seguiemj.ttf') format('truetype');
+         url('static/fonts/seguiemj.ttf') format('truetype');
 }
 
 
