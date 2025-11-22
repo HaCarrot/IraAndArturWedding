@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Свадьба Иры и Артура</title>
+    <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 1. Заголовок с именами, фото и датой -->
+        <section class="section header">
+            <img src="/static/images/wedding.png" alt="Ира и Артур" class="couple-photo">
+        </section>
+
+        <!-- 2. Обратный отсчет -->
+        <section class="section countdown">
+            <h2>До нашего дня осталось:</h2>
+            <div class="countdown-container" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="days">0</span>
+                    <span class="countdown-label">дней</span>
+                </div>
+                <span class="countdown-separator">:</span>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">0</span>
+                    <span class="countdown-label">часов</span>
+                </div>
+                <span class="countdown-separator">:</span>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">0</span>
+                    <span class="countdown-label">минут</span>
+                </div>
+                <span class="countdown-separator">:</span>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">0</span>
+                    <span class="countdown-label">секунд</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Приветственные слова -->
+        <section class="section welcome">
+            <h2>Дорогие родные и друзья!</h2>
+            <p>Мы приглашаем вас на самый важный и счастливый день в нашей жизни - день нашей свадьбы! Для нас будет огромной радостью разделить этот особенный момент с вами.
+            Ваше присутствие сделает наш праздник по-настоящему незабываемым!</p>
+            <div class="decorative-line"></div>
+            <p style="font-style: italic; color: #666; font-family: 'Cormorant Garamond', serif;">
+            </p>
+        </section>
+
+        <!-- 4. Адрес и карты -->
+        <section class="section location">
+            <h2>Место проведения</h2>
+            <p><strong>Адрес:</strong> г. Казань, ул. Сибгата Хакима, 4, Центр семьи «Казан»</p>
+            <div class="map-buttons">
+                <a href="https://yandex.ru/maps/org/glavny_dvorets_brakosochetaniy/121605745308/?ll=49.108273%2C55.812818&z=17" class="btn" target="_blank">Яндекс Карты</a>
+                <a href="https://2gis.ru/kazan/geo/2956122910690198" class="btn btn-outline" target="_blank">2ГИС</a>
+            </div>
+        </section>
+
+        <!-- 5. Тайминг -->
+        <section class="section schedule">
+            <h2>Расписание дня</h2>
+            <div style="margin-top: 25px; padding: 20px; background: #fff5f5;">
+                <p style="margin: 0; color: #666; font-size: 1.2em; font-family: 'Cormorant Garamond', serif;">
+                    ✦ На данный момент находится в разработке. Приглашение будет изменятся, следите за новостями! ✦
+                </p>
+            </div>
+        </section>
+
+        <!-- 6. Ваш текст -->
+        <section class="section wishes">
+            <h2>Обратите внимание!</h2>
+            <p>Наша свадьба попадает на период праздников - очень популярный туристический сезон в Казани. Если не позаботиться о поиске жилья <b>заранее</b>, можно столкнуться с неоправданно высокими ценами.
+            Советуем искать жильё в <b>Ново-Савиновском</b> районе. Если нужна помощь с подбором жилья, не стесняйтесь к нам обратиться!</p>
+        </section>
+
+        <!-- 7. Кнопка RSVP с ссылкой на Яндекс Формы -->
+        <section class="section rsvp">
+            <h2>Подтвердите присутствие</h2>
+            <p>Пожалуйста, сообщите нам о вашем решении до <b>31 декабря</b>, заполнив форму гостя</p>
+            <a href="https://forms.yandex.ru/u/6922004e5056900da417e3d6" class="btn" target="_blank" style="margin: 30px 0;">
+                Заполнить форму
+            </a>
+        </section>
+
+        <!-- 8. Футер -->
+        <footer class="section footer">
+            <p style="font-size: 1.4em; margin-bottom: 15px;">
+                С любовью, Ира и Артур ❤
+            </p>
+            <p style="font-style: italic; font-size: 1.1em;">
+                Ждём вас на нашем торжестве!
+            </p>
+            <img src="/static/images/cake.png">
+        </footer>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
