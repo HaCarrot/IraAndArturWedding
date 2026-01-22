@@ -123,3 +123,22 @@ const checkFont = (fontName) => {
 if (!checkFont('Permanent Marker') || !checkFont('Caveat')) {
     document.documentElement.classList.add('fonts-fallback');
 }
+
+// Анимация для таймлайна
+const timelineItems = document.querySelectorAll('.timeline-item');
+const timelineObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.classList.add('visible');
+            }, index * 200);
+        }
+    });
+}, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+});
+
+timelineItems.forEach(item => {
+    timelineObserver.observe(item);
+});

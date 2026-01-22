@@ -86,7 +86,7 @@ body {
 
 /* Иконки для секций */
 .section::before {
-    content: '✦';
+    content: '❤';
     position: absolute;
     top: -20px;
     left: 50%;
@@ -134,6 +134,12 @@ body {
     content: '' !important;
 }
 
+.dresscode::before{
+    content: '👠' !important;
+}
+.gift::before{
+    content: '🎅🏻' !important;
+}
 .header {
     text-align: center;
     padding: 10px 0 0px;
@@ -198,7 +204,7 @@ h2 {
 }
 
 /* Все текстовые элементы используют Comic Sans */
-.welcome p, .location p, .wishes p, .rsvp p, .timeline-item, .footer p {
+.welcome p, .location p, .wishes p, .rsvp p, .timeline-item, .footer p, .gift p {
     font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
     font-size: 1.2em;
     font-weight: 500;
@@ -407,7 +413,448 @@ h2 {
     transform: translateY(-20px);
     font-weight: 600;
 }
+/* Стили для таймлайна - компактная версия */
+.timeline {
+    position: relative;
+    max-width: 700px;
+    margin: 30px auto 0;
+    padding: 15px 0;
+}
 
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: calc(100% - 30px);
+    background: linear-gradient(to bottom, transparent, #ff0000, #000000, #ff0000, transparent);
+    top: 15px;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.timeline-time {
+    width: 160px;
+    padding: 10px 15px;
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 0;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    margin: 0 20px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.timeline-time::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background: #ff0000;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 0 2px #000000;
+}
+
+.timeline-item:nth-child(odd) .timeline-time::after {
+    right: -30px;
+}
+
+.timeline-item:nth-child(even) .timeline-time::after {
+    left: -30px;
+}
+
+.timeline-content {
+    width: 280px;
+    padding: 20px;
+    background: #ffffff;
+    border: 2px solid rgba(0, 0, 0, 1);
+    border-radius: 0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    border-color: #ff0000;
+    transform: translateY(-2px);
+}
+
+.timeline-content h4 {
+    color: #000000;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+.timeline-content h4::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ff0000;
+}
+
+.timeline-content p {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    font-size: 1em;
+    color: #666;
+    line-height: 1.4;
+    margin-top: 8px;
+}
+
+/* Анимация появления элементов таймлайна */
+.timeline-item {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.timeline-item:nth-child(even) {
+    transform: translateX(20px);
+}
+
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.dresscode-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 900px;
+    margin: 40px auto 30px;
+    gap: 60px; /* Увеличил отступ между блоками вместо разделителя */
+}
+
+.dresscode-side {
+    flex: 1;
+    padding: 35px 30px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 0;
+    position: relative;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.dresscode-side:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.dresscode-icon {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+}
+
+.dresscode-side h3 {
+    color: #000000;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.dresscode-side h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+}
+
+.women h3::after {
+    background: linear-gradient(90deg, #ffb6c1, #b0e0e6);
+}
+
+.men h3::after {
+    background: linear-gradient(90deg, #000000, #00008b);
+}
+
+.dresscode-description {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 35px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+/* Цветовые круги */
+.color-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.women-colors {
+    background: linear-gradient(
+        45deg,
+        #ffccd5 0%,     /* Более насыщенный светло-розовый */
+        #e6b8ff 20%,    /* Светло-сиреневый */
+        #99d6ff 40%,    /* Голубой */
+        #9de7b3 60%,    /* Мятный */
+        #ffd8b1 80%,    /* Персиковый */
+        #ffccd5 100%    /* Замыкаем круг */
+    );
+    animation: womenGradient 8s ease infinite;
+    background-size: 400% 400%;
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 
+        0 8px 25px rgba(0, 0, 0, 0.15),
+        inset 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.men-colors {
+    background: linear-gradient(
+        45deg,
+        #000000 0%,
+        #000000 25%,
+        #000119 50%,
+        #081231 75%,
+        #041132 100%
+    );
+    animation: menGradient 6s ease infinite;
+    background-size: 300% 300%;
+    border: 4px solid white;
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(0, 0, 0, 0.15),
+        inset 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Убрал .color-name так как надписи больше нет */
+
+@keyframes womenGradient {
+    0% { 
+        background-position: 0% 50%;
+        transform: rotate(0deg) scale(1);
+    }
+    50% { 
+        background-position: 100% 50%;
+        transform: rotate(180deg) scale(1.05);
+    }
+    100% { 
+        background-position: 0% 50%;
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@keyframes menGradient {
+    0% { 
+        background-position: 0% 50%;
+        transform: rotate(0deg) scale(1);
+    }
+    50% { 
+        background-position: 100% 50%;
+        transform: rotate(-180deg) scale(1.05);
+    }
+    100% { 
+        background-position: 0% 50%;
+        transform: rotate(-360deg) scale(1);
+    }
+}
+
+/* Убрал весь блок .dresscode-divider */
+
+.dresscode-note {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    font-size: 1em;
+    color: #666;
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Адаптивность для дресс-кода */
+@media (max-width: 768px) {
+    .dresscode-container {
+        flex-direction: column;
+        gap: 40px; /* Отступ между вертикальными блоками */
+        max-width: 500px;
+    }
+    
+    .dresscode-side {
+        min-height: 300px;
+        padding: 30px 25px;
+    }
+    
+    .color-circle {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dresscode-container {
+        gap: 35px;
+    }
+    
+    .dresscode-side {
+        min-height: 280px;
+        padding: 25px 20px;
+    }
+    
+    .dresscode-icon {
+        font-size: 3em;
+    }
+    
+    .dresscode-side h3 {
+        font-size: 1.2em;
+    }
+    
+    .dresscode-description {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+    
+    .color-circle {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .dresscode-note {
+        font-size: 0.95em;
+        margin-top: 30px;
+    }
+}
+
+/* Адаптивность для таймлайна */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 0;
+        height: calc(100% - 40px);
+        top: 20px;
+    }
+    
+    .timeline-item {
+        flex-direction: column !important;
+        align-items: flex-start;
+        margin-left: 50px;
+        margin-bottom: 30px;
+        transform: translateY(20px) !important;
+    }
+    
+    .timeline-item.visible {
+        transform: translateY(0) !important;
+    }
+    
+    .timeline-time {
+        width: 100%;
+        max-width: 180px;
+        margin: 0 0 15px 0;
+        text-align: left;
+        padding-left: 35px;
+        font-size: 0.95em;
+    }
+    
+    .timeline-time::after {
+        left: -37px !important;
+        right: auto !important;
+        width: 10px;
+        height: 10px;
+    }
+    
+    .timeline-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 18px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.1em;
+    }
+    
+    .timeline-content p {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline {
+        margin: 25px auto 0;
+        padding: 10px 0;
+    }
+    
+    .timeline::before {
+        background: white;
+    }
+    
+    .timeline-item {
+        margin-left: 40px;
+        margin-bottom: 25px;
+    }
+    
+    .timeline-time {
+        font-size: 0.9em;
+        padding: 8px 12px;
+        max-width: 160px;
+    }
+    
+    .timeline-content {
+        padding: 15px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1em;
+    }
+    
+    .timeline-content p {
+        font-size: 0.9em;
+    }
+}
 @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.7; }
@@ -426,7 +873,7 @@ h2 {
         margin: 25px 0px;
     }
     .schedule{
-        margin: 25px 10px;
+        margin: 40px 10px;
     }
     
     .header {
@@ -535,3 +982,4 @@ h2 {
     background: #ffffff;
     }
 }
+
