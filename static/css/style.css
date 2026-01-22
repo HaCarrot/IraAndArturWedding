@@ -643,7 +643,7 @@ h2 {
         #99d6ff 40%,    /* Голубой */
         #9de7b3 60%,    /* Мятный */
         #ffd8b1 80%,    /* Персиковый */
-        #ffccd5 100%    /* Замыкаем круг */
+        #fffccc 100%    /* Замыкаем круг */
     );
     animation: womenGradient 8s ease infinite;
     background-size: 400% 400%;
@@ -659,8 +659,8 @@ h2 {
         #000000 0%,
         #000000 25%,
         #000119 50%,
-        #081231 75%,
-        #041132 100%
+        #101b3d 75%,
+        #102559 100%
     );
     animation: menGradient 6s ease infinite;
     background-size: 300% 300%;
